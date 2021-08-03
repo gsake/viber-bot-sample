@@ -1,10 +1,10 @@
 {
     "token": "*******************",
-    "uri": "demobot",
-    "name": "Demo Bot",
+    "uri": "my-test-bot",
+    "name": "Test Bot",
     "avatar": "https://static.thenounproject.com/png/415512-200.png",
     "expose_domain": "https://mybot.xyz",
     "expose_uri_path": "/viber/webhook",
     "port": 8080,
-    "subscribe_url": "viber://pa?chatURI=demobot"
+    "subscribe_url": "viber://pa?chatURI=my-test-bot"
 }
