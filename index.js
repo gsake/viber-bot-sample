@@ -29,7 +29,7 @@ bot.on(BotEvents.SUBSCRIBED, response => {
 });
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
-	response.send(new TextMessage(`Hi Hi ${response.userProfile.name}, I received your message: ${message.text}`));
+	response.send(new TextMessage(`Hi ${response.userProfile.name}! I received your message: ${message.text}`));
 });
 
 app.use(config.expose_uri_path, bot.middleware());
