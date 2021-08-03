@@ -29,7 +29,7 @@ bot.on(BotEvents.SUBSCRIBED, response => {
 });
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
-	response.send(new TextMessage(`I have received the following message: ${message}`));
+	response.send(new TextMessage(`Hi Hi ${response.userProfile.name}, I received your message: ${message.text}`));
 });
 
 app.use(config.expose_uri_path, bot.middleware());
@@ -39,7 +39,7 @@ app.listen(config.port, () => {
 	logger.info(`Application is running! Port: ${config.port}`);
 
 	bot.setWebhook(config.expose_domain + config.expose_uri_path).catch(error => {
-		logger.debug(`Error: The webhook ${config.expose_domain + config.expose_uri_path} cannot be set. ${error}`);
+		logger.info(`Error: The webhook ${config.expose_domain + config.expose_uri_path} cannot be set. ${error}`);
 		process.exit(1);
 	});
 
